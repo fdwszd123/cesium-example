@@ -48,3 +48,8 @@ pnpm dev
 
   - [X] 3dtiles贴模型取点
     ![3dtiles贴模型取点](./picture/3dtiles贴模型取点.png)
+
+- 其他
+
+  - [X] 天空盒做全景图浏览器
+    ![天空盒做全景图浏览器](./picture/天空盒做全景图浏览器.png)

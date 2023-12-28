@@ -4,7 +4,8 @@ import {
   IconMosaic,
   IconSunFill,
   IconLocation,
-  IconCommon
+  IconCommon,
+  IconAttachment
 } from "@arco-design/web-vue/es/icon";
 export const menuOptions = [
   {
@@ -73,6 +74,13 @@ export const menuOptions = [
     icon: IconCommon,
     subList: [
       { key: "5-1", title: "3dtiles贴模型取点", path: "/model/clampModel" },
+    ],
+  },{
+    key: "6",
+    title: "其他",
+    icon: IconAttachment,
+    subList: [
+      { key: "6-1", title: "天空盒做全景图浏览器", path: "/other/panorama" },
     ],
   },
 ];

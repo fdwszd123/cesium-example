@@ -140,6 +140,22 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/other",
+    redirect: "/other/panorama",
+    meta: {
+      title: "其他",
+    },
+    children: [
+      {
+        path: "panorama",
+        meta: {
+          title: "天空盒做全景图浏览器",
+        },
+        component: () => import("@/pages/other/panorama.vue"),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
