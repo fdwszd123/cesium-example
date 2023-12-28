@@ -1,6 +1,6 @@
 # Cesium常见功能集合
 
-项目使用vue3+vite+cesium搭建记录了学习cesium过程中实现的的一些常见功能。包括粒子特效、材质、量测工具、绘制工具等。具体功能如下所示。
+项目使用vue3+vite+cesium+arco.design搭建记录了学习cesium过程中实现的的一些常见功能。包括粒子特效、材质、量测工具、绘制工具等。具体功能如下所示。
 
 ## 项目启动
 
@@ -30,7 +30,6 @@ pnpm dev
     ![缩放控件](./picture/缩放控件.png)
   - [X] tooltip
     ![tooltip](./picture/tooltip.png)
-
 - 粒子效果
 
   - [X] 下雨
@@ -39,12 +38,13 @@ pnpm dev
     ![下雪](./picture/下雪.png)
   - [X] 雾天
     ![雾天](./picture/雾天.png)
-    
   - [X] 火焰
     ![火焰](./picture/火焰.png)
-
 - 打点
 
   - [X] primitive方式打点
     ![primitive方式打点](./picture/primitive方式打点.png)
+- 模型
 
+  - [X] 3dtiles贴模型取点
+    ![3dtiles贴模型取点](./picture/3dtiles贴模型取点.png)

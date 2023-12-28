@@ -42,6 +42,54 @@ class CesiumOperation {
     this.viewer.scene.globe.terrainExaggeration = 1.0; //地形夸张
     return this.viewer;
   }
+  //图元方式创建多段线
+  static createPrimitivePolyline(
+    positions,
+    opt = {
+      width: 5.0,
+      color: new Cesium.Color(0, 153, 0, 0.5),
+    }
+  ) {
+    //定义几何形状
+    const polyline = new Cesium.GeometryInstance({
+      geometry: new Cesium.PolylineGeometry({
+        positions: positions,
+        width: opt.width,
+      }),
+    });
+    //定义外观
+    const polylineAppearance = new Cesium.PolylineMaterialAppearance({
+      material: Cesium.Material.fromType("Color", {
+        color: opt.color,
+      }),
+    });
+    //创建Primitive
+    const polylineGeometry = new Cesium.Primitive({
+      geometryInstances: polyline,
+      appearance: polylineAppearance,
+    });
+    return polylineGeometry;
+  }
+  //图元方式创建点集合
+
+  static createPointPrimitiveCollection(
+    positions,
+    opt = {
+      color: Cesium.Color.WHITE,
+      pixelSize: 20,
+      outlineColor: Cesium.Color.TRANSPARENT,
+      outlineWidth: 0,
+    }
+  ) {
+    const pointPrimitives = new Cesium.PointPrimitiveCollection();
+    positions.forEach((position, index) => {
+      pointPrimitives.add({
+        ...opt,
+        position,
+      });
+    });
+    return pointPrimitives;
+  }
 }
 
 export default CesiumOperation;

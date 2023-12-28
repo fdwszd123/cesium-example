@@ -98,7 +98,8 @@ const routes = [
           title: "大雾",
         },
         component: () => import("@/pages/particle/fog.vue"),
-      },{
+      },
+      {
         path: "fire",
         meta: {
           title: "火焰",
@@ -121,7 +122,22 @@ const routes = [
         },
         component: () => import("@/pages/mark/primitive.vue"),
       },
-    
+    ],
+  },
+  {
+    path: "/model",
+    redirect: "/model/clampModel",
+    meta: {
+      title: "模型",
+    },
+    children: [
+      {
+        path: "clampModel",
+        meta: {
+          title: "3dtiles贴模型取点",
+        },
+        component: () => import("@/pages/model/clampModel.vue"),
+      },
     ],
   },
 ];

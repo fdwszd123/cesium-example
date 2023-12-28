@@ -1,4 +1,11 @@
-import { IconApps, IconTool, IconMosaic,IconSunFill,IconLocation } from "@arco-design/web-vue/es/icon";
+import {
+  IconApps,
+  IconTool,
+  IconMosaic,
+  IconSunFill,
+  IconLocation,
+  IconCommon
+} from "@arco-design/web-vue/es/icon";
 export const menuOptions = [
   {
     key: "1",
@@ -51,13 +58,21 @@ export const menuOptions = [
       { key: "3-3", title: "大雾", path: "/particle/fog" },
       { key: "3-4", title: "火焰", path: "/particle/fire" },
     ],
-  }, {
+  },
+  {
     key: "4",
     title: "打点",
     icon: IconLocation,
     subList: [
       { key: "4-1", title: "primitive方式打点", path: "/mark/primitive" },
-    
+    ],
+  },
+  {
+    key: "5",
+    title: "模型",
+    icon: IconCommon,
+    subList: [
+      { key: "5-1", title: "3dtiles贴模型取点", path: "/model/clampModel" },
     ],
   },
 ];
